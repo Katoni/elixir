@@ -187,6 +187,10 @@ var config = {
          | reduced file sizes. Adjust any plugin option here.
          |
          */
+         
+        minifier: function (options, plugins, config) {
+            return plugins.cssnano(config.css.cssnano.pluginOptions);
+        },
 
         cssnano: {
             // http://cssnano.co/options
